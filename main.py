@@ -28,7 +28,7 @@ def limpar(tempo):
 #Funcoes Redes for Nmap papai
 def menu_nmap():
     os.system("clear")
-    print("\033[1;31m#-----Um script basico com funcoes do nmap-----#\033[m")
+    print("\033[1;31m#---Um script basico com funcoes do nmap---#\033[m")
     print(f"{cor['verde']}━━━━━━━━━━━━━❮{cor['fecha']}{cor['roxo']}◆{cor['fecha']}{cor['verde']}❯━━━━━━━━━━━━━{cor['fecha']}")
     print(f"{cor['verde']}[{cor['fecha']}{cor['roxo']}1{cor['fecha']}{cor['verde']}]{cor['fecha']}{cor['roxo']}--> {cor['fecha']}{cor['verde']}Scanear ips na sua rede{cor['fecha']}")
     print(f"{cor['verde']}[{cor['fecha']}{cor['roxo']}2{cor['fecha']}{cor['verde']}]{cor['fecha']}{cor['roxo']}--> {cor['fecha']}{cor['verde']}Portas abertas{cor['fecha']}")
