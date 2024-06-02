@@ -1,0 +1,36 @@
+#___________________________#
+#feito por by suportz       #
+#criado 02/06/2024          #
+#painel simples             #
+#___________________________#
+
+#COMO USAR O MENU DO NMAP????
+1- saiba o seu endereço ip privado(ip do cll)
+2- na primeira opção no nmap utilize o
+seu ip ex: 192.168.1.5 e mude para 192.168.1.0/24
+3- essa forma sera usada tbm nas opçoes 1 e a 3.
+4 - na função 3 tbm pode usar o ip seu privado normal.
+
+isso fara um scaner na sua rede para descobrir
+os dispositivos conctados em sua rede local.
+
+#COMO USAR O MENU DE TELEFONE????
+1- pegue o numero de telefone do individo
+2- e cole nesse formato: 551199972351
+3- tire o + e os espaços
+4- SO LEMBRANDO ESSA FUNCAO ELA TEM UM TEMPO DE EXPIRAÇÃO
+ENTÃO QUANDO ACABAR ESSE TEMPO, A FUNÇÃO N IRA MAIS FUNCIONAR
+
+#COMO USAR O MENU CEP?
+1- pegue o cep do individo 
+2- cole sem espaços ex: 44856470
+
+#COMO USAR O MENU DE CPNJ
+1- pegue o cnpj do individo
+2- e cole sem espaços ex: 54884439000153
+
+espero q tenham entendio,qualquer duvida entre em contato cmg
+telegra --> @Suportzn021
+
+
+
