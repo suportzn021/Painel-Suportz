@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 #script criada por py suportz
-#para fins educacionais/estudos
+#para fins Educacionais/Estudos
 
 #bibliotecas
 import os
@@ -475,7 +475,7 @@ def sobre_painel():
     print(f"{cor['verde']}━━━━━━━━━━━━━❮{cor['fecha']}{cor['roxo']}◆{cor['fecha']}{cor['verde']}❯━━━━━━━━━━━━━{cor['fecha']}")
     print(f"{cor['verde']}[{cor['fecha']}{cor['roxo']}+{cor['fecha']}{cor['verde']}]-{cor['roxo']}Criador:{cor['fecha']} {cor['verde']}Suportz")
     print(f"{cor['verde']}[{cor['fecha']}{cor['roxo']}+{cor['fecha']}{cor['verde']}]-{cor['roxo']}Versao:{cor['fecha']} {cor['verde']}1.0.0")
-    print(f"{cor['verde']}[{cor['fecha']}{cor['roxo']}+{cor['fecha']}{cor['verde']}]-{cor['roxo']}Data:{cor['fecha']} {cor['verde']}2/06/2024")
+    print(f"{cor['verde']}[{cor['fecha']}{cor['roxo']}+{cor['fecha']}{cor['verde']}]-{cor['roxo']}Data:{cor['fecha']} {cor['verde']}02/06/2024")
     print(f"{cor['verde']}━━━━━━━━━━━━━━❮{cor['fecha']}{cor['roxo']}◆{cor['fecha']}{cor['verde']}❯━━━━━━━━━━━━━{cor['fecha']}")
     
 def menu_info():
