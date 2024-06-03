@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-#script criada por py suportz
+#script criada por py SuportzModder
 #para fins Educacionais/Estudos
+#Painel feito com intuito de consultas
 
 #bibliotecas
 import os
@@ -11,8 +12,6 @@ import string
 from faker import Faker
 from faker.providers import credit_card
 import requests
-#variaveis globais
-fimPrograma = "\33[33mPrograma Finalizado!!\033[m"
 #dicionarios de cores para utilizar nos menus e funções
 cor = {
     "roxo":"\033[35m",
@@ -69,7 +68,7 @@ def redes():
                 ip_endereco = input(f"{cor['verde']}Digite o endereco ip:{cor['fecha']} {cor['roxo']}")
                 servicos_on(ip_endereco)
             else:
-                print("\033[33mErro! comando invalido\033[m")
+                print("\033[31mErro! comando invalido\033[m")
                 time.sleep(1)
                 os.system("clear")
                 continue                       
@@ -109,6 +108,7 @@ def gerador():
     print(f'{cor["roxo"]}Email: {cor["fecha"]}{cor["verde"]}{email}{cor["fecha"]}')
     print(f'{cor["roxo"]}Senha: {cor["fecha"]}{cor["verde"]}{senha}{cor["fecha"]}')
     
+#menu do gerador de pessoas   
 def gerar_pessoa():
     os.system("clear")
     while True:
@@ -122,7 +122,7 @@ def gerar_pessoa():
         elif comando == "1":
             gerador()
         else:
-            print("\033[33mComando inválido.\033[m")
+            print("\033[31mComando inválido.\033[m")
             limpar(1)   
 #fazer consulta de um ip
 def puxar_ip(endereco_ip):
@@ -138,7 +138,7 @@ def puxar_ip(endereco_ip):
         print(f"{cor['roxo']}Continente:{cor['fecha']}{cor['verde']} {data.get('country')}{cor['fecha']}")
         print(f"{cor['roxo']}Localizacao:{cor['fecha']}{cor['verde']} {data.get('loc')}{cor['fecha']}")
         print(f"{cor['roxo']}Status:{cor['fecha']} {cor['verde']}online{cor['fecha']}")
-######fazer uma consulta de um ip
+#fazer uma consulta de um ip
 def consultar_ip():
     os.system("clear")
     while True:
@@ -153,7 +153,7 @@ def consultar_ip():
             ip = input(f"{cor['verde']}Insira o ip:{cor['fecha']} {cor['roxo']}")
             puxar_ip(ip)
         else:
-            print("\033[33mComando inválido.\033[m")
+            print("\033[31mComando inválido.\033[m")
             limpar(1)
             
 #Função para gerar uma senha aleatória
@@ -164,8 +164,8 @@ def gerar_senha(tamanho=12):
 
 # Função para gerar um e-mail aleatório
 def gerar_email():
-    nomes = ["Tareds",'aries','user','usuario', 'admin', 'ano_ni', 'demo', 'exem','maniRob','kingxv',"supraO#","daniR_","Games"]
-    dominios = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'hots.com','loves.com',"jumpis.com","Gpeude.gd"]
+    nomes = ["Tareds",'aries','user','mazisi','usuario', 'admin', 'ano_ni', 'demo', 'exem','maniRob','kingxv',"supraO#","daniR_","Games"]
+    dominios = ['gmail.com',"io" ,'yahoo.com', 'hotmail.com', 'outlook.com', 'hots.com','loves.com',"jumpis.com","Gpeude.gd"]
     nome = random.choice(nomes) + str(random.randint(1000, 9999))
     dominio = random.choice(dominios)
     email = f"{nome}@{dominio}"
@@ -197,19 +197,20 @@ def menu_senhasEemail():
         elif escolha == '99':
             break
         else:
-            print("\033[33mOpção inválida, tente novamente.\033[m")
+            print("\033[31mOpção inválida, tente novamente.\033[m")
             limpar(1)
-
+#consultar ddd e tel
 def consultar_num(ddd,numero):
+    #ddd numero
     url = f"https://brasilapi.com.br/api/ddd/v1/{ddd}"
     response = requests.get(url)
-    ##############################
+    #telefone numero
     API_KEY = '0yodSwrgWuXP7zFprcaKe2pAhgO8h14b'
     url_validar = f"https://api.apilayer.com/number_verification/validate?number={numero}"
     headers = {'apikey': API_KEY}
     response_validar = requests.get(url_validar, headers=headers)
 
-    
+    #resultados se a pag estiver on/cod 200
     if response.status_code == 200:
         data_ddd = response.json()
         data = response_validar.json()
@@ -229,10 +230,10 @@ def consultar_num(ddd,numero):
             print(f"{cor['roxo']}DDD {ddd} corresponde ao estado:{cor['fecha']} {cor['verde']}{estado}{cor['fecha']}")
             print(f"{cor['roxo']}Cidades:{cor['fecha']} {cor['verde']}{cidade}{cor['fecha']}")
         else:
-            print(f"\033[33mErro Numero n encontrado!\033[m")
+            print(f"\033[31mErro Numero n encontrado!\033[m")
     else:
-        print(f"\033[33mErro no servico!\033[m")
-        
+        print(f"\033[31mErro no servico!\033[m")
+#menu do consultar tel and ddd       
 def puxar_tel():
     while True:
         ddd = input(f"{cor['roxo']}Informe o DDD:{cor['fecha']} {cor['verde']}")
@@ -249,7 +250,7 @@ def puxar_tel():
         else:
             print(fimPrograma)
             break
-            
+#caladora simples            
 def calculadora():
     num1 = float(input(f"{cor['roxo']}Primeiro Numero:{cor['fecha']} {cor['verde']}"))
     soma = input(f"{cor['roxo']}Operador +,-,÷,×:{cor['fecha']} {cor['verde']}")
@@ -264,7 +265,7 @@ def calculadora():
         if num1 > 0 and num2 > 0:            
             print(f'{cor["roxo"]}o resultado é = {cor["fecha"]}{cor["verde"]}{num1/num2}{cor["fecha"]}')
         else:
-            print(f"\033[33mErro!! numeros n podem ser dividido por zero!!\033[m")
+            print(f"\033[31mErro!! numeros n podem ser dividido por zero!!\033[m")
     else:
         print(f"\033[1;31mOperador Inválido!!!\033[m")
     time.sleep(3)
@@ -272,24 +273,24 @@ def calculadora():
 
 #funcao para baixar arquivo e adicionar no arquivo  Download  
 def baixar():
-    print(f"\033[33mFuncao baixar arquivos\033[m")
+    print(f"\033[31mFuncao baixar arquivos\033[m")
     URL = input(f"{cor['roxo']}Coloque a URL -->{cor['fecha']} {cor['verde']}")
     dir = "/sdcard/Download/"
     os.system(f"wget {URL} -P {dir}")#baixo e informa o diretório 
     print(f"{cor['verde']}Finalizado!! Arquivo esta em {dir}{cor['fecha']}")
     limpar(3)
-
+#calculo raiz quadrada
 def raiz():
     num = int(input(f"{cor['roxo']}digite um numero:{cor['fecha']} {cor['verde']}"))
     print(num*num)
     time.sleep(3)
-    
+#calculo de raio de um circulo    
 def raio_circulo():
     pi = 3.14
     raio = float(input(f"{cor['roxo']}numero do raio:{cor['fecha']} {cor['verde']} "))
     print("Area = ",pi*raio**2)
     time.sleep(3)
- 
+#calculo IMC peso/ altura**2
 def imc():
     peso = float(input(f"{cor['roxo']}qual seu peso?{cor['fecha']} {cor['verde']}"))
     altura = float(input(f"{cor['roxo']}qual sua altura?{cor['fecha']} {cor['verde']}"))
@@ -299,11 +300,11 @@ def imc():
     elif calculo > 18.5 and calculo < 24.9:
         print(f"{cor['verde']}Peso saudavel{cor['verde']}")
     elif calculo > 25.0 and calculo < 30.0:
-        print(f"\033[33mSobrepeso\033[m")
+        print(f"\033[31mSobrepeso\033[m")
     else:
-        print(f"\033[33mObeso nivel hard\033[m")
+        print(f"\033[31mObeso nivel hard\033[m")
     time.sleep(3)
-    
+#menu de outros calculadora ,raiz...  
 def outros():
     while True:
         os.system("clear")
@@ -330,8 +331,9 @@ def outros():
         elif cmd == "5":
             imc()
         else:
-            print(f"\033[33mComando não reconhecido, tente novamente.\033[m")
+            print(f"\033[31mComando não reconhecido, tente novamente.\033[m")
             time.sleep(1)
+#funcao gerar e imprimir cc Fake           
 def mostra_cc():
     os.system("clear")
     fake = Faker()
@@ -347,7 +349,7 @@ def mostra_cc():
     print(f"{cor['roxo']}Numero do Cartão:{cor['verde']} {numero_cartao}{cor['fecha']}")
     print(f"{cor['roxo']}Data de Validade:{cor['fecha']} {cor['verde']}{data_validade}{cor['fecha']}")
     print(f"{cor['roxo']}CVV:{cor['fecha']} {cor['verde']}{cvv}{cor['fecha']}")
-    
+#menu do gerar cc    
 def gerar_cc():
     os.system("clear")
     while True:
@@ -368,7 +370,7 @@ def gerar_cc():
         elif comando == "1":
             mostra_cc()
         else:
-            print("\033[33mComando inválido.\033[m")
+            print("\033[31mComando inválido.\033[m")
             time.sleep(1)
             os.system("clear")
 
@@ -389,10 +391,10 @@ def puxar_cep(cep):
         print(f"{cor['roxo']}Cidade:{cor['fecha']} {cor['verde']}{data_cep['city']}{cor['fecha']}")
         print(f"{cor['roxo']}Distrito:{cor['fecha']} {cor['verde']}{data_cep['district']}{cor['fecha']}")
     except requests.exceptions.RequestException as e:
-        print(f"\033[33mErro ao buscar o CEP: {cep}\033[m")
+        print(f"\033[31mErro ao buscar o CEP: {cep}\033[m")
     except KeyError:
-        print("\033[33mCEP não encontrado ou resposta inválida.\033[m")
-
+        print("\033[31mCEP não encontrado ou resposta inválida.\033[m")
+#menu do puxar_cep
 def consultar_cep():
     os.system("clear")
     while True:    
@@ -407,7 +409,7 @@ def consultar_cep():
             cep = input(f"{cor['verde']}Insira o CEP:{cor['fecha']} {cor['roxo']}")
             puxar_cep(cep)
         else:
-            print("\033[33mComando inválido.\033[m")
+            print("\033[31mComando inválido.\033[m")
             limpar(1)
 #puxa cnpjtinha
 def puxar_cnpj(cnpj):
@@ -448,9 +450,9 @@ def puxar_cnpj(cnpj):
         print(f"{cor['roxo']}Descrição Motivo Situação Cadastral:{cor['fecha']} {cor['verde']}{data_cnpj['descricao_motivo_situacao_cadastral']}{cor['fecha']}")
         print(f"{cor['roxo']}Identificador Matriz/Filial:{cor['fecha']} {cor['verde']}{data_cnpj['descricao_identificador_matriz_filial']}{cor['fecha']}")
     except requests.exceptions.RequestException as e:
-        print(f"\033[33mErro ao buscar o CNPJ: {cnpj}\033[m")
+        print(f"\033[31mErro ao buscar o CNPJ: {cnpj}\033[m")
     except KeyError:
-        print(f"\033[33mCNPJ não encontrado ou resposta inválida.\033[m")
+        print(f"\033[31mCNPJ não encontrado ou resposta inválida.\033[m")
             
 #consultar cnpj aianananna
 def consultar_cnpj():
@@ -467,7 +469,7 @@ def consultar_cnpj():
             cnpj = input(f"{cor['verde']}Insira o CNPJ:{cor['fecha']} {cor['roxo']}")
             puxar_cnpj(cnpj)
         else:
-            print("\033[33mComando invalido.\033[m")
+            print("\033[31mComando invalido.\033[m")
             limar(1)
 #menu do criado
 def sobre_painel():
@@ -477,7 +479,7 @@ def sobre_painel():
     print(f"{cor['verde']}[{cor['fecha']}{cor['roxo']}+{cor['fecha']}{cor['verde']}]-{cor['roxo']}Versao:{cor['fecha']} {cor['verde']}1.0.0")
     print(f"{cor['verde']}[{cor['fecha']}{cor['roxo']}+{cor['fecha']}{cor['verde']}]-{cor['roxo']}Data:{cor['fecha']} {cor['verde']}02/06/2024")
     print(f"{cor['verde']}━━━━━━━━━━━━━━❮{cor['fecha']}{cor['roxo']}◆{cor['fecha']}{cor['verde']}❯━━━━━━━━━━━━━{cor['fecha']}")
-    
+#menu do criador by SuportzModder   
 def menu_info():
     os.system("clear")
     while True:        
@@ -495,11 +497,11 @@ def menu_info():
         elif comando == "2":
             sobre_painel()
         else:
-            print("\033[33mComando invalido.\033[m")
+            print("\033[31mComando invalido.\033[m")
             time.sleep(1)
             os.system("clear")
            
-#funcao menu principal
+#menu principal
 def menu():
     limpar(0.100)
     print(f"""{cor["verde"]}
