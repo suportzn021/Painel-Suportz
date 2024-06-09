@@ -16,7 +16,7 @@ os dispositivos conctados em sua rede local.
 
 #COMO USAR O MENU DE TELEFONE????
 1- pegue o numero de telefone do individo
-2- e cole nesse formato: 551199972351
+2- e cole nesse formato ex: 551199972351
 3- tire o + e os espaços
 4- SO LEMBRANDO ESSA FUNCAO ELA TEM UM TEMPO DE EXPIRAÇÃO
 ENTÃO QUANDO ACABAR ESSE TEMPO, A FUNÇÃO N IRA MAIS FUNCIONAR
@@ -28,6 +28,10 @@ ENTÃO QUANDO ACABAR ESSE TEMPO, A FUNÇÃO N IRA MAIS FUNCIONAR
 #COMO USAR O MENU DE CPNJ
 1- pegue o cnpj do individo
 2- e cole sem espaços ex: 54884439000153
+
+#COMO USAR A FUNCAO BAIXAR ARQUIVO?
+1- apenas insira a URL ex www.google.com ou link de algo q queira baixar
+2- e pronto,seu arquivo sera baixado e ficara em downloads.
 
 espero q tenham entendio,qualquer duvida entre em contato cmg
 telegra --> @Suportzn021
