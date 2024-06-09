@@ -240,10 +240,10 @@ def puxar_tel():
         numero = input(f"{cor['roxo']}Informe o Telefone:{cor['fecha']} {cor['verde']}")
         consultar_num(ddd,numero)
         print(f"{cor['verde']}━━━━━━━━━━━━❮{cor['fecha']}{cor['roxo']}◆{cor['fecha']}{cor['verde']}❯━━━━━━━━━━━{cor['fecha']}")
-        print(f"{cor['verde']}[{cor['fecha']}1{cor['verde']}]--> {cor['roxo']}Repetir{cor['fecha']}")
-        print(f"{cor['verde']}[{cor['fecha']}99{cor['verde']}]--> {cor['roxo']}Sair{cor['fecha']}")
+        print(f"{cor['verde']}[{cor['fecha']}{cor['roxo']}1{cor['fecha']}{cor['verde']}]--> {cor['roxo']}Repetir{cor['fecha']}")
+        print(f"{cor['verde']}[{cor['fecha']}{cor['roxo']}99{cor['fecha']}{cor['verde']}]--> {cor['roxo']}Sair{cor['fecha']}")
         print(f"{cor['verde']}━━━━━━━━━━━━❮{cor['fecha']}{cor['roxo']}◆{cor['fecha']}{cor['verde']}❯━━━━━━━━━━━{cor['fecha']}")           
-        res = input("Escolha uma opcao: ")
+        res = input(f"{cor['verde']}Escolha uma opcao:{cor['fecha']} {cor['roxo']}")
         if res == "1":
             os.system("clear")
             continue
