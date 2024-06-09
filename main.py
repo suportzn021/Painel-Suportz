@@ -237,7 +237,7 @@ def consultar_num(ddd,numero):
 def puxar_tel():
     while True:
         ddd = input(f"{cor['roxo']}Informe o DDD:{cor['fecha']} {cor['verde']}")
-        numero = input(f"{cor['roxo']}Informe o Telefone:{cor['fecha']} {cor['verde']} ")
+        numero = input(f"{cor['roxo']}Informe o Telefone:{cor['fecha']} {cor['verde']}")
         consultar_num(ddd,numero)
         print(f"{cor['verde']}━━━━━━━━━━━━❮{cor['fecha']}{cor['roxo']}◆{cor['fecha']}{cor['verde']}❯━━━━━━━━━━━{cor['fecha']}")
         print(f"{cor['verde']}[{cor['fecha']}1{cor['verde']}]--> {cor['roxo']}Repetir{cor['fecha']}")
