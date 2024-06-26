@@ -246,10 +246,11 @@ def puxar_tel():
         res = input(f"{cor['verde']}Escolha uma opcao:{cor['fecha']} {cor['roxo']}")
         if res == "1":
             os.system("clear")
-            continue
-        else:
-            print(fimPrograma)
+        elif res = "99":
             break
+        else:
+            print(f"\033[31mComando não reconhecido, tente novamente.\033[m")
+            time.sleep(1)
 #caladora simples            
 def calculadora():
     num1 = float(input(f"{cor['roxo']}Primeiro Numero:{cor['fecha']} {cor['verde']}"))
