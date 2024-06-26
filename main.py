@@ -246,7 +246,7 @@ def puxar_tel():
         res = input(f"{cor['verde']}Escolha uma opcao:{cor['fecha']} {cor['roxo']}")
         if res == "1":
             os.system("clear")
-        elif res = "99":
+        elif res == "99":
             break
         else:
             print(f"\033[31mComando não reconhecido, tente novamente.\033[m")
