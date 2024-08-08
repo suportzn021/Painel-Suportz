@@ -8,3 +8,24 @@ Feito em puro python.
 
 Espero q gostem.
 
+-------------INSTALAÇÃO-------------
+
+
+termux-setup-storage
+
+pkg install - y && pkg update -y
+
+pkg install wget
+
+pkg install git
+
+git clone https://github.com/suportzn021/Painel-Suportz
+
+cd Painel-Suportz
+
+chmod +x install
+
+./install
+
+#Dps dessa instalação quando quiser iniciar o painel use python3 main.py ou
+python main.py
